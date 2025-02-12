@@ -3,9 +3,13 @@ Welcome to Docker - Part 2 // Cas pratique
 --------------------------------------------
 **1)** Ouverture de Visual studio, du dossier DOCKER puis du Terminal depuis lequel je vais travailler.  
 ![openVSCode_ _terminal_01](https://github.com/user-attachments/assets/c0216f85-892f-40f2-8b21-e21d77f24830)
-
+Mon repository est coné et accessible. J'ai ensuite cloné le repository qui va me servir de base de travaille mais, je ne l'ai pas cloné à la racine de mon projet. Du coup, je ne pouvais pas travailler correctement. 
+J'ai créé un nouveau repository avec la bonne dénomination de projet, tout en modifiant l'URL du repo Git "ami" avec l'URL de mon nouveau repo.
+Les commits sont effectué, ma racine est à peu près à jour (impossible de spprimer DOCKER_DLB, qui est totalement vide).
+Je commence les exercices.
 
 **2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.
+
 
 **3)** Lancer l’image docker que vous venez de créer puis lancer un container (avec cette image).
 
