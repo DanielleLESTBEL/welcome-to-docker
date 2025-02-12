@@ -4,6 +4,7 @@ Welcome to Docker - Part 2 // Cas pratique
 **1)** Ouverture de Visual studio, du dossier DOCKER puis du Terminal depuis lequel je vais travailler.  
 ![openVSCode_ _terminal_01](https://github.com/user-attachments/assets/c0216f85-892f-40f2-8b21-e21d77f24830)
 
+
 **2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.
 
 **3)** Lancer l’image docker que vous venez de créer puis lancer un container (avec cette image).
