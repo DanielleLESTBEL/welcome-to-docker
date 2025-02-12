@@ -8,20 +8,36 @@ J'ai créé un nouveau repository avec la bonne dénomination de projet, tout en
 Les commits sont effectué, ma racine est à peu près à jour (impossible de spprimer DOCKER_DLB, qui est totalement vide).
 Je commence les exercices.
 
-**2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.
+**2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.  
+![alt text](Screenshots/erreur_run_docker_non_ouvert_img02.PNG)
+![alt text](Screenshots/create_container_from_image_and_port_img02.PNG)
 
-
-**3)** Lancer l’image docker que vous venez de créer puis lancer un container (avec cette image).
+**3)** Lancer l’image docker que vous venez de créer puis lancer un container (avec cette image).  
+![alt text](Screenshots/create_container_from_image_and_port_img02.PNG)
 
 **4)** Vérifiez que le container est bien lancé. Exécutez d’autres commandes de bases, faites dans le Job01 (Jour01).
+![alt text](Screenshots/container_actif_img04.PNG)
 
-**5)** Accéder au container pour visualiser le résultat.
+**5)** Accéder au container pour visualiser le résultat.  
+![alt text](Screenshots/result_in_port8088_img05.PNG)
 
 **6)** Retournez dans Visual Studio et coder quelques lignes dans votre projet.
+Premier essai de modification de code = échec :  
+![alt text](Screenshots/modification_code_img06.PNG) \
 
-**7)** Vérifiez le résultat faites en sorte que vos modifications soient prises en compte dans votre image docker et votre container.
+Pour modifier le texte, je dois supprimer l'image obsolète (pas de rafraichissement possible avec Docker) et en recréer une.  
+Fermer le container et l'image puis recréer.  
+![alt text](Screenshots/stop_container_kill_image_img06.PNG)
 
-**8)** Comprenez ce qu’il faut faire pour que ce soit pris en compte.
+
+**7)** Vérifiez le résultat faites en sorte que vos modifications soient prises en compte dans votre image docker et votre container.  
+![alt text](Screenshots/restart_image_img07.png)
+
+
+**8)** Comprenez ce qu’il faut faire pour que ce soit pris en compte.  
+![alt text](Screenshots/container_up_and_running_img08.PNG)  
+![alt text](Screenshots/result_text_modified_08.PNG)
+
 
 **9)** Publier sur votre compte docker une image docker, et rendez-la disponible à un membre de votre promo.
 
