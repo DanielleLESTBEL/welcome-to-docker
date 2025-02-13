@@ -5,7 +5,7 @@ Welcome to Docker - Part 2 // Cas pratique
 ![openVSCode_ _terminal_01](https://github.com/user-attachments/assets/c0216f85-892f-40f2-8b21-e21d77f24830)
 Mon repository est cloné et accessible. J'ai ensuite cloné le repository qui va me servir de base de travaille mais, je ne l'ai pas cloné à la racine de mon projet. Du coup, je ne pouvais pas travailler correctement. 
 J'ai créé un nouveau repository avec la bonne dénomination de projet, tout en modifiant l'URL du repo Git "ami" avec l'URL de mon nouveau repo.
-Les commits sont effectué, ma racine est à peu près à jour (impossible de supprimer DOCKER_DLB, qui est totalement vide).
+Les commits sont effectué, ma racine est à jour (impossible de supprimer DOCKER_DLB, qui est totalement vide).
 Je commence les exercices.
 
 **2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.  
@@ -55,7 +55,7 @@ docker build -t welcome-to-docker .
 
 
 **9)** Publier sur votre compte docker une image docker, et rendez-la disponible à un membre de votre promo.  
-* D'abord, je démarre docker (car j'ai repris l'exercice un jour plus tard) : \
+* D'abord, je démarre docker pour lui indiquer quel docker desktop utiliser (le mien !) : \
 docker login  
 ![alt text](Screenshots/start_docker_img09.PNG)
 
