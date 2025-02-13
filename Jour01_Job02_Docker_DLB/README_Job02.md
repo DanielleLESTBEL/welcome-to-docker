@@ -22,11 +22,11 @@ Je commence les exercices.
 ![alt text](Screenshots/result_in_port8088_img05.PNG)
 
 **6)** Retournez dans Visual Studio et coder quelques lignes dans votre projet.
-Premier essai de modification de code = échec :  
+* Premier essai de modification de code = échec :  
 ![alt text](Screenshots/modification_code_img06.PNG) \
 
-Pour modifier le texte, je dois supprimer l'image obsolète (pas de rafraichissement possible avec Docker) et en recréer une.  
-Fermer le container et l'image puis recréer.  
+* Pour modifier le texte, je dois supprimer l'image obsolète (pas de rafraichissement possible avec Docker) et en recréer une.  
+* Fermer le container et l'image puis recréer.  
 ![alt text](Screenshots/stop_container_kill_image_img06.PNG)
 
 
@@ -39,10 +39,23 @@ Fermer le container et l'image puis recréer.
 ![alt text](Screenshots/result_text_modified_08.PNG)
 
 
-**9)** Publier sur votre compte docker une image docker, et rendez-la disponible à un membre de votre promo.
+**9)** Publier sur votre compte docker une image docker, et rendez-la disponible à un membre de votre promo.  
+* D'abord, je démarre docker (car j'ai repris l'exercice un jour plus tard): \
+docker login  
+![alt text](Screenshots/start_docker_img09.PNG)
+
+* Pointer (tag) l'image que je vais publier (en désignant le compte docker où elle est stockée, donc en indiquant mon pseudo docker = daniellelb) : \
+docker tag welcome-to-docker daniellelb/welcome-to-docker:latest    
+![alt text](Screenshots/tag_image_cpte_perso_img09.PNG)
+
+* Publier l'image : \
+docker push daniellelb/welcome-to-docker:latest  
+![alt text](Screenshots/image_pushed_published_img09.PNG)
 
 **10)** Récupérer une image docker d’un membre de votre promo et refaire les tests et modifications sur celle-ci (citez l’auteur
-de l’image d’origine dans la page).
+de l’image d’origine dans la page).  
+
+
 
 **11)** Publier sur votre Docker l’image modifié du membre de votre promo.
 
