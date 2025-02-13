@@ -3,34 +3,49 @@ Welcome to Docker - Part 2 // Cas pratique
 --------------------------------------------
 **1)** Ouverture de Visual studio, du dossier DOCKER puis du Terminal depuis lequel je vais travailler.  
 ![openVSCode_ _terminal_01](https://github.com/user-attachments/assets/c0216f85-892f-40f2-8b21-e21d77f24830)
-Mon repository est coné et accessible. J'ai ensuite cloné le repository qui va me servir de base de travaille mais, je ne l'ai pas cloné à la racine de mon projet. Du coup, je ne pouvais pas travailler correctement. 
+Mon repository est cloné et accessible. J'ai ensuite cloné le repository qui va me servir de base de travaille mais, je ne l'ai pas cloné à la racine de mon projet. Du coup, je ne pouvais pas travailler correctement. 
 J'ai créé un nouveau repository avec la bonne dénomination de projet, tout en modifiant l'URL du repo Git "ami" avec l'URL de mon nouveau repo.
-Les commits sont effectué, ma racine est à peu près à jour (impossible de spprimer DOCKER_DLB, qui est totalement vide).
+Les commits sont effectué, ma racine est à peu près à jour (impossible de supprimer DOCKER_DLB, qui est totalement vide).
 Je commence les exercices.
 
 **2)** Créer l’image docker (à récupérer depuis https://github.com/docker/welcome-to-docker). Il faut que le fichier dockerfile soit pris en compte.  
-![alt text](Screenshots/erreur_run_docker_non_ouvert_img02.PNG)
+cd welcome-to-docker 
+docker run -d -p 8088:80 --name welcome-to-docker docker/welcome-to-docker
+![alt text](Screenshots/erreur_run_docker_non_ouvert_img02.PNG)  
 ![alt text](Screenshots/create_container_from_image_and_port_img02.PNG)
 
 **3)** Lancer l’image docker que vous venez de créer puis lancer un container (avec cette image).  
+docker run -d -p 8088:80 --name welcome-to-docker docker/welcome-to-docker  
 ![alt text](Screenshots/create_container_from_image_and_port_img02.PNG)
 
-**4)** Vérifiez que le container est bien lancé. Exécutez d’autres commandes de bases, faites dans le Job01 (Jour01).
+**4)** Vérifiez que le container est bien lancé. Exécutez d’autres commandes de bases, faites dans le Job01 (Jour01).  
+docker ps  
 ![alt text](Screenshots/container_actif_img04.PNG)
 
 **5)** Accéder au container pour visualiser le résultat.  
+localhost:8088     [à taper dans n'importe quel navigateur]
 ![alt text](Screenshots/result_in_port8088_img05.PNG)
 
-**6)** Retournez dans Visual Studio et coder quelques lignes dans votre projet.
+**6)** Retournez dans Visual Studio et coder quelques lignes dans votre projet.  
+Rechercher le fichier dans l'arborescence => welcome-to-docker / src / App.js  
 * Premier essai de modification de code = échec :  
-![alt text](Screenshots/modification_code_img06.PNG) \
+![alt text](Screenshots/modification_code_img06.PNG)  
 
 * Pour modifier le texte, je dois supprimer l'image obsolète (pas de rafraichissement possible avec Docker) et en recréer une.  
 * Fermer le container et l'image puis recréer.  
-![alt text](Screenshots/stop_container_kill_image_img06.PNG)
+docker stop e9b11629070d               [e9b11629070d = id du container   // arrêt du container]  
+docker rmi  docker/welcome-to-docker   [docker/welcome-to-docker = nom de l'image   // eedaff45e3c7 = id de l'image]  Vérifier dans le docker hub que l'image a bien disparu.  
+![alt text](Screenshots/stop_container_kill_image_img06.PNG)  
+
+* Recréation de l'image :  
+docker build -t welcome-to-docker .  
+
+* Modification du texte dans le fichier App.js   [welcome-to-docker / src / App.js]  
+Changement de "Congratulations!" en "Happy Wednesday to You Dear Danielle"
 
 
 **7)** Vérifiez le résultat faites en sorte que vos modifications soient prises en compte dans votre image docker et votre container.  
+docker build -t welcome-to-docker .
 ![alt text](Screenshots/restart_image_img07.png)
 
 
@@ -40,20 +55,33 @@ Je commence les exercices.
 
 
 **9)** Publier sur votre compte docker une image docker, et rendez-la disponible à un membre de votre promo.  
-* D'abord, je démarre docker (car j'ai repris l'exercice un jour plus tard): \
+* D'abord, je démarre docker (car j'ai repris l'exercice un jour plus tard) : \
 docker login  
 ![alt text](Screenshots/start_docker_img09.PNG)
 
-* Pointer (tag) l'image que je vais publier (en désignant le compte docker où elle est stockée, donc en indiquant mon pseudo docker = daniellelb) : \
+* Pointer (tag) l'image que je vais publier (en désignant le compte docker hub où elle est stockée, donc en indiquant mon pseudo docker = daniellelb) : \
 docker tag welcome-to-docker daniellelb/welcome-to-docker:latest    
 ![alt text](Screenshots/tag_image_cpte_perso_img09.PNG)
 
-* Publier l'image : \
+* Publier l'image :  
 docker push daniellelb/welcome-to-docker:latest  
 ![alt text](Screenshots/image_pushed_published_img09.PNG)
 
 **10)** Récupérer une image docker d’un membre de votre promo et refaire les tests et modifications sur celle-ci (citez l’auteur
 de l’image d’origine dans la page).  
+* Demander son pseudo Docker Hub à la personne en question (ici, Aicha Camara dont le pseudo est aichaa). Ensuite, lancer la commande :  
+docker pull aichaaa/welcome-to-docker:latest     [pas utile de mentionner "latest" car le Terminal prend par défaut la dernière version de l'image et la confirmation arrive avec l'affichage du message "Using default tag: latest"]  
+![alt text](Screenshots/pull_img_from_img10.PNG)  
+
+* Vérifier que l'image d'Aicha soit bien créée :   docker images   
+![alt text](Screenshots/liste_images_img10.PNG)  
+
+* Afficher l'image d'Aicha dans mon projet, donc l'extraire :   
+docker 
+
+* Tests sur l'image du docker d'Aicha :  
+
+
 
 
 
