@@ -70,16 +70,37 @@ docker push daniellelb/welcome-to-docker:latest
 **10)** Récupérer une image docker d’un membre de votre promo et refaire les tests et modifications sur celle-ci (citez l’auteur
 de l’image d’origine dans la page).  
 * Demander son pseudo Docker Hub à la personne en question (ici, Aicha Camara dont le pseudo est aichaa). Ensuite, lancer la commande :  
-docker pull aichaaa/welcome-to-docker:latest     [pas utile de mentionner "latest" car le Terminal prend par défaut la dernière version de l'image et la confirmation arrive avec l'affichage du message "Using default tag: latest"]  
+docker pull aichaaa/welcome-to-docker:latest    
+   
+N.B. : [pas utile de mentionner "latest" car le Terminal prend par défaut la dernière version de l'image et la confirmation arrive avec l'affichage du message "Using default tag: latest"]  
+  
 ![alt text](Screenshots/pull_img_from_img10.PNG)  
 
 * Vérifier que l'image d'Aicha soit bien créée :   docker images   
 ![alt text](Screenshots/liste_images_img10.PNG)  
+  
+* Créer un container temporaire (ou non !) où stocker l'image d'Aicha :  
+docker create --name temp-container aichaaa/welcome-to-docker  
 
-* Afficher l'image d'Aicha dans mon projet, donc l'extraire :   
-docker 
+
+
+* Copier (extraire) l'image d'Aicha dans mon projet, dans le fichier app.js de src :   
+docker cp temp-container:app/src .src  
+![  ](Screenshots/copie_container_aicha_dans_src_app_img10.PNG)
+
+
+* Aller App.js (de src) pour modifier image d'Aicha :  
+
+Texte original :  
+![alt text](Screenshots/code_aicha_app_img10.PNG)
+
+Texte modifié :  
+![alt text](Screenshots/modif_code_aicha_img10.png)
 
 * Tests sur l'image du docker d'Aicha :  
+
+* Visualiser image d'Aicha dans un navigateur :  
+D'abord, stopper l'activité du container et de l'image modifiée, dans docker desktop. 
 
 
 
