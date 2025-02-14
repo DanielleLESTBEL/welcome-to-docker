@@ -63,17 +63,17 @@ Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre p
 
 retourner dans le terminal de docker desktop
 
-● Arrêter votre container par son ID (2 manière de trouver l’ID)
-Depuis le Terminal, docker ps pour avoir l'id du container.
+● Arrêter votre container par son ID (2 manière de trouver l’ID) : 
+> Depuis le Terminal, docker ps pour avoir l'id du container.  
 Depuis le Desktop, onglet Container, l'ID est mentionné dans une colonne. 
 
 ● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au dessus.
 
-● Supprimer le container (2 manières)
-● observer quand vous avez validé votre commande ce qui c’est
-passé dans votre fenêtre au dessus
+● Supprimer le container (2 manières)  
 
-● Placez vous sur le menu à gauche dans images
-● supprimer l’image docker de super mario (2 manières)
-● observer quand vous avez validé votre commande ce qui c’est
-passé dans votre fenêtre au dessus
+● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au-dessus.  
+
+● Placez vous sur le menu à gauche dans images  
+● supprimer l’image docker de super mario (2 manières)  
+
+● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au-dessus.  
