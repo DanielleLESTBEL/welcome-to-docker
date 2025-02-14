@@ -46,7 +46,28 @@ docker ps
 * Quand la commande est validée, observer ce qui s’est passé dans votre fenêtre au-dessus.  
 
 
+Méthode 2 :
+Je passe par le Docker Desktop pour effectuer toutes les opérations.
+
 
 * Lancer une autre image de super mario sur un port différent.  
 
 
+Ouvrir votre explorateur et trouver le moyen d’accéder au container
+construit
+● Accéder et jouer un peu dans votre explorateur internet (faites des
+captures du jeux en cours “3 au moins”)
+
+retourner dans le terminal de docker desktop
+● Arrêter votre container par son ID (2 manière de trouver l’ID)
+● observer quand vous avez validé votre commande ce qui c’est
+passé dans votre fenêtre au dessus
+
+● Supprimer le container (2 manières)
+● observer quand vous avez validé votre commande ce qui c’est
+passé dans votre fenêtre au dessus
+
+● Placez vous sur le menu à gauche dans images
+● supprimer l’image docker de super mario (2 manières)
+● observer quand vous avez validé votre commande ce qui c’est
+passé dans votre fenêtre au dessus
