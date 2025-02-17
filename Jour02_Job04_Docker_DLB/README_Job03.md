@@ -68,9 +68,6 @@ Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre p
 
 ### **6)** Retourner dans le terminal de docker desktop pour :
 
-
-
-
 >a) Arrêter votre container par son ID (2 manière de trouver l’ID) :  
 
 > * Depuis le Terminal : docker ps pour avoir l'id du container.  
