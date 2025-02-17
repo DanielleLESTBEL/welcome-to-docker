@@ -78,7 +78,20 @@ Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre p
 >c) Supprimer le container (2 manières)  
 
 **Méthode 1** : depuis le terminal  
-docker rm nom du container  supprimer
+
+Je liste tous les containers (inactifs) :  
+docker ps -a  
+![alt text](Screenshots/Job03_liste_containers_inactifs.PNG)
+
+docker rm nom du container à supprimer  
+[docker rm mario2-container]
+
+*ou*
+
+docker rm id container  
+[docker rm e67abcf2e490]
+
+![alt text](Screenshots/Job03_xxcontainer_terminal_way1.PNG)
 
 
 **Méthode 2** : depuis Docker Desktop  
@@ -88,8 +101,13 @@ Se positionner sur la ligne du container (dans l'onglet Containers) et cliquer s
 
 >d) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au-dessus.  
 
-### **7)** Placez vous sur le menu à gauche dans images  
+![alt text](Screenshots/Job03_xxcontainer_terminal_way1.PNG)  
 
+![alt text](Screenshots/Job03_xxcontainer_desktop_way2_done.PNG)
+
+
+
+### **7)** Placez vous sur le menu à gauche dans images  
 
 > a) Supprimer l’image docker de super mario (2 manières)  
 
@@ -101,8 +119,20 @@ docker rmi nom image
 
 docker rmi id image
 
+ATTENTION : bien vérifier que TOUS les containers soient arrêtés et supprimés, sinon...  
+
+![alt text](Screenshots/Job03_xximage_terminal_way1_error.PNG)
+
+Une fois tous les containers supprimés :   
+
+![alt text](Screenshots/Job03_xximage_terminal_way1_success.PNG)  
+
+
+
 **Méthode 2** : suppression depuis le Docker Desktop  
 ![alt text](Screenshots/Job03_xximage_desktop_way2.PNG)
 
 >b) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au-dessus.  
+
+![alt text](Screenshots/Job03_xximage_desktop_way2_success.PNG)
 
