@@ -79,10 +79,12 @@ Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre p
 
 >a) Arrêter votre container par son ID (2 manière de trouver l’ID) :  
 
-> * Depuis le Terminal : docker ps pour avoir l'id du container.  
+> * Depuis le Terminal : docker ps (pour avoir l'id du container) puis docker stop id container (ou nom container).  
 > * Depuis le Desktop :  onglet Container, l'ID est mentionné dans une colonne. 
 
 >b) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au dessus.
+
+Plus de carré vert annonçant le fonctionnement du container dans le Desktop et/ou dans le terminal : docker ps -a (qui liste tous les containers, avec leur statut).
 
 >c) Supprimer le container (2 manières)  
 
