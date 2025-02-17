@@ -13,6 +13,7 @@ L'image est maintenant présente dans mon Docker Desktop.
 J'aurais également pu récupérer l'image depuis le Terminal de VSCode avec la commande :  
 
 docker pull pengbai/docker-supermario  
+![alt text](Screenshots/Job03_pull_image_8600.PNG)  
 
 
 
@@ -23,7 +24,7 @@ docker pull pengbai/docker-supermario
 __Commande *pour travailler dans le dossier correspondant à l'exercice*__ :
 cd Jour01_Job03_Docker_DLB  
 
-
+![alt text](Screenshots/job03_pointer_workng_fldr_vsc_step03.PNG)
 
 
 __Commande *pour ouvrir (connecter) mon docker depuis VSCode*__ : 
@@ -31,14 +32,17 @@ docker login
 
 ![alt text](Screenshots/job03_docker_login_vsc_step04.PNG)
 
-* Lancer l'image dans un container. Trouver les deux méthodes **avec des ports différents** pour le faire (invite de commande et ???). 
+### **3)**  Lancer l'image dans un container. Trouver les deux méthodes **avec des ports différents** pour le faire (invite de commande et ???). 
 
-Méthode 1 :  
+**Méthode 1 :**  Invite de commande    
 Je vais d'abord utiliser l'invite de commande et nommer le container **mario-container**. Je vais le faire fonctionner sur le port 8600:8080.
 Je vais ensuite vérifier que le container est activé. 
 
-Commandes :  
+**Commandes :**    
 docker run -d -p8600:8080 --name mario-container pengbai/docker-supermario  
+
+![alt text](Screenshots/Job03_run_img_and_container.PNG)
+
 *puis*  
 docker ps  
 
@@ -46,34 +50,59 @@ docker ps
 * Quand la commande est validée, observer ce qui s’est passé dans votre fenêtre au-dessus.  
 
 
-Méthode 2 :
+**Méthode 2 :** 
 Je passe par le Docker Desktop pour effectuer toutes les opérations.
 
 
 
 
-* Lancer une autre image de super mario sur un port différent, dans un autre container :  
+### **4)** Lancer une autre image de super mario sur un port différent, dans un autre container :  
 
 
-Ouvrir votre explorateur et trouver le moyen d’accéder au container construit :  
+* Ouvrir votre explorateur et trouver le moyen d’accéder au container construit :  
 
 Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre port), soit je passe par le Desktop et je clique directement sur le port rattaché à mon container avec son image et son port.
 
-● Accéder et jouer un peu dans votre explorateur internet (faites des captures du jeux en cours “3 au moins”)
+### **5)** Accéder et jouer un peu dans votre explorateur internet (faites des captures du jeux en cours “3 au moins”)
 
-retourner dans le terminal de docker desktop
 
-● Arrêter votre container par son ID (2 manière de trouver l’ID) : 
-> Depuis le Terminal, docker ps pour avoir l'id du container.  
-Depuis le Desktop, onglet Container, l'ID est mentionné dans une colonne. 
+### **6)** Retourner dans le terminal de docker desktop pour :
 
-● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au dessus.
+>a) Arrêter votre container par son ID (2 manière de trouver l’ID) :  
 
-● Supprimer le container (2 manières)  
+> * Depuis le Terminal : docker ps pour avoir l'id du container.  
+> * Depuis le Desktop :  onglet Container, l'ID est mentionné dans une colonne. 
 
-● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au-dessus.  
+>b) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au dessus.
 
-● Placez vous sur le menu à gauche dans images  
-● supprimer l’image docker de super mario (2 manières)  
+>c) Supprimer le container (2 manières)  
 
-● observer quand vous avez validé votre commande ce qui s’est passé dans votre fenêtre au-dessus.  
+**Méthode 1** : depuis le terminal  
+docker rm nom du container  supprimer
+
+
+**Méthode 2** : depuis Docker Desktop  
+Se positionner sur la ligne du container (dans l'onglet Containers) et cliquer sur la poubelle ou l'onglet "supprimer" qui apparait au-dessus des lignes de containers.  
+![alt text](Screenshots/Job03_xxcontainer_desktop_way2.PNG)  
+
+
+>d) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au-dessus.  
+
+### **7)** Placez vous sur le menu à gauche dans images  
+
+
+> a) Supprimer l’image docker de super mario (2 manières)  
+
+**Méthode 1** : suppression depuis le Terminal  
+Commandes :  
+docker rmi nom image 
+
+*ou*  
+
+docker rmi id image
+
+**Méthode 2** : suppression depuis le Docker Desktop  
+![alt text](Screenshots/Job03_xximage_desktop_way2.PNG)
+
+>b) Observer, quand vous avez validé votre commande, ce qui s’est passé dans votre fenêtre au-dessus.  
+
