@@ -41,13 +41,12 @@ Je vais ensuite vérifier que le container est activé.
 **Commandes :**    
 docker run -d -p8600:8080 --name mario-container pengbai/docker-supermario  
 
-![alt text](Screenshots/Job03_run_img_and_container.PNG)
 
 *puis*  
 docker ps  
 
 
-* Quand la commande est validée, observer ce qui s’est passé dans votre fenêtre au-dessus.  
+![alt text](Screenshots/Job03_run_img_and_container.PNG)  
 
 
 **Méthode 2 :** 
@@ -64,6 +63,13 @@ Je passe par le Docker Desktop pour effectuer toutes les opérations.
 Soit j'ouvre une page dans un navigateur et je tape localhost:8600 (ou l'autre port), soit je passe par le Desktop et je clique directement sur le port rattaché à mon container avec son image et son port.
 
 ### **5)** Accéder et jouer un peu dans votre explorateur internet (faites des captures du jeux en cours “3 au moins”)
+
+![alt text](Screenshots/Job03_img_mario_p8600_step01.PNG)  
+![alt text](Screenshots/Job03_img_mario_p8600_step02.PNG)  
+![alt text](Screenshots/Job03_img_mario_p8600_step03.PNG)  
+![alt text](Screenshots/Job03_img_mario_p8600.PNG)  
+![alt text](Screenshots/Job03_img_mario_p7500.PNG)  
+
 
 
 ### **6)** Retourner dans le terminal de docker desktop pour :
