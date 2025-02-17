@@ -1,25 +1,15 @@
-# Start your image with a node base image
-FROM node:18-alpine
+# Start your image with an Apache and PHP base image
+FROM php:7.4.3-apache
 
-# The /app directory should act as the main application directory
-WORKDIR /app
-
-# Copy the app package and package-lock.json file
-COPY package*.json ./
+# Copy the index.php file in the Apache directory
+COPY index.php /var/www/html/
 
 # Copy local directories to the current local directory of our docker image (/app)
-COPY ./src ./src
-COPY ./public ./public
+
 COPY ./Screenshots ./Screenshots
 
+# Expose the port 8080
+EXPOSE 8080
 
-# Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm install \
-    && npm install -g serve \
-    && npm run build \
-    && rm -fr node_modules
-
-EXPOSE 3000
-
-# Start the app using serve command
-CMD [ "serve", "-s", "build" ]
+# Start the apache app using foreground status to keep it active
+CMD [ "apache2-foreground", "build" ]
