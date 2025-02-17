@@ -1,4 +1,4 @@
-# Start your image with an Apache and PHP base image
+# Start my image with an Apache and PHP base image
 FROM php:7.4.3-apache
 
 # Copy the index.php file in the Apache directory
