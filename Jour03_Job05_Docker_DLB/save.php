@@ -16,7 +16,3 @@ echo json_encode(["status" => "success"]);
 http_response_code(400);
 echo json_encode(["status" => "error", "message" => "Données invalides"]);
 }
-?>
-
-
-/* echo file_put_contents('results.json', json_encode($_POST)); */

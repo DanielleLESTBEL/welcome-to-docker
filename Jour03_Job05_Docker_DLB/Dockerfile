@@ -50,3 +50,4 @@ EXPOSE 80
 
 # Démarrer PHP-FPM et Nginx ensemble
 CMD php-fpm82 --daemonize && nginx -g 'daemon off;'
+
